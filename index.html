@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Praneeth Anireddy — student, builder, Science Olympiad national competitor, violist.">
+<title>Praneeth Anireddy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBFAF7; --surface:#FFFFFF; --ink:#20222A; --ink-2:#585F6D; --ink-3:#98A0AD;
+  --line:#EAE7E0; --accent:#3B5BDB; --accent-soft:#EBEFFC; --warm:#C2410C; --warm-soft:#FBEBE2;
+  --shadow:0 1px 3px rgba(32,34,42,.04),0 6px 20px rgba(32,34,42,.06);
+}
+[data-theme="dark"]{
+  --bg:#14151A; --surface:#1C1E25; --ink:#ECEEF2; --ink-2:#A6ADBB; --ink-3:#6B7280;
+  --line:#282B33; --accent:#8AA0FF; --accent-soft:#1E2440; --warm:#F0895A; --warm-soft:#2E1F17;
+  --shadow:0 1px 3px rgba(0,0,0,.3),0 8px 26px rgba(0,0,0,.4);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+h1{font-family:"Fraunces",serif;font-size:2.6rem;font-weight:600;letter-spacing:-.02em;line-height:1.05;margin-bottom:10px}
+h2{font-family:"Fraunces",serif;font-size:1.35rem;font-weight:600;margin:0 0 18px;letter-spacing:-.01em}
+section{padding:40px 0}
+section+section{border-top:1px solid var(--line)}
+p{color:var(--ink-2)}
+::selection{background:var(--accent);color:#fff}
+
+.theme{position:fixed;top:16px;right:16px;width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);cursor:pointer;font-size:.95rem;box-shadow:var(--shadow);transition:transform .25s}
+.theme:hover{transform:rotate(25deg)}
+
+header{padding:70px 0 6px}
+.role{color:var(--ink-2);font-size:1.08rem;margin-bottom:22px;max-width:48ch}
+.role b{color:var(--ink);font-weight:600}
+.links{display:flex;gap:10px;flex-wrap:wrap}
+.chip{font-size:.88rem;padding:7px 15px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink-2);transition:all .2s}
+.chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;transform:translateY(-1px)}
+
+.eyebrow{font-size:.76rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+
+.grid{display:grid;gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow);transition:transform .22s,box-shadow .22s,border-color .22s}
+.card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.card .top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.card h3{font-size:1.08rem;font-weight:600}
+.card .yr{font-size:.8rem;color:var(--ink-3);white-space:nowrap}
+.card p{font-size:.94rem;margin-top:6px}
+.card .tech{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.card .tech span{font-size:.76rem;background:var(--accent-soft);color:var(--accent);padding:3px 9px;border-radius:6px}
+
+.headline{background:var(--warm-soft);border:1px solid color-mix(in srgb,var(--warm) 25%,var(--line));border-radius:14px;padding:18px 20px;margin-bottom:20px}
+.headline .big{font-family:"Fraunces",serif;font-size:1.15rem;font-weight:600;color:var(--warm);margin-bottom:2px}
+.headline p{font-size:.92rem;color:var(--ink-2)}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+table td{padding:9px 0;border-bottom:1px solid var(--line)}
+table tr:last-child td{border-bottom:none}
+table td:first-child{color:var(--ink);font-weight:500}
+table td:last-child{text-align:right;color:var(--ink-3);white-space:nowrap;font-size:.85rem}
+.medal{display:inline-block;width:22px;color:var(--warm);font-weight:600}
+
+.item{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.item:last-of-type{border-bottom:none}
+.item h3{font-size:1rem;font-weight:600}
+.item p{font-size:.9rem;margin-top:3px}
+.item .yr{font-size:.8rem;color:var(--ink-3);white-space:nowrap}
+
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tag{font-size:.84rem;background:var(--surface);border:1px solid var(--line);padding:5px 12px;border-radius:8px;color:var(--ink-2)}
+
+footer{padding:34px 0 64px;color:var(--ink-3);font-size:.85rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<button class="theme" id="themeBtn" aria-label="Toggle theme">◐</button>
+
+<header>
+  <div class="wrap">
+    <h1>Praneeth Anireddy</h1>
+    <p class="role">Student and builder. I make <b>real, working software</b> — games, tools, and apps I use myself — compete in <b>Science Olympiad</b> nationally, and play <b>viola</b> in a youth orchestra.</p>
+    <div class="links">
+      <a class="chip" href="#projects">Projects</a>
+      <a class="chip" href="#scioly">Science Olympiad</a>
+      <a class="chip" href="#more">More</a>
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="eyebrow">Projects</p>
+    <h2>Things I've built</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="top"><h3>Science Olympiad Study Hub</h3><span class="yr">2026</span></div>
+        <p>A single-file study app for the 2027 Division B season: all 25 events, flashcards with spaced repetition, AI-generated quizzes, and progress tracking.</p>
+        <div class="tech"><span>HTML</span><span>JavaScript</span><span>Claude API</span><span>localStorage</span></div>
+      </div>
+
+      <div class="card">
+        <div class="top"><h3>Jungle Bandits</h3><span class="yr">2026</span></div>
+        <p>A roguelite platformer in HTML5 Canvas: 15 heroes, per-hero upgrades, a skin shop, achievements, and a daily challenge mode.</p>
+        <div class="tech"><span>HTML5 Canvas</span><span>JavaScript</span></div>
+      </div>
+
+      <div class="card">
+        <div class="top"><h3>ResearchPulse</h3><span class="yr">2026</span></div>
+        <p>An equity-research monitoring app: multi-user accounts, AI-generated alerts, and scheduled email and Telegram digests.</p>
+        <div class="tech"><span>Python</span><span>Claude API</span><span>SMTP</span><span>Telegram</span><span>Render</span></div>
+      </div>
+
+      <div class="card">
+        <div class="top"><h3>This website</h3><span class="yr">2026</span></div>
+        <p>A clean single-file portfolio with light and dark mode — no frameworks.</p>
+        <div class="tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="scioly">
+  <div class="wrap">
+    <p class="eyebrow">Science Olympiad &middot; 2025&ndash;2026 &middot; Division B</p>
+    <h2>National competitor</h2>
+    <div class="headline">
+      <div class="big">&#129351; Maryland State Champions &rarr; 10th at Nationals</div>
+      <p>Competed for Mount View MS. Our team won Maryland and finished 10th overall at USC Nationals &mdash; where I placed 10th in the nation in Scrambler.</p>
+    </div>
+    <table>
+      <tr><td><span class="medal">&#129351;</span>Experimental Design</td><td>1st &middot; States</td></tr>
+      <tr><td><span class="medal">&#129351;</span>Water Quality</td><td>1st &middot; Clarksville</td></tr>
+      <tr><td><span class="medal">&#129352;</span>Scrambler</td><td>2nd &middot; States</td></tr>
+      <tr><td><span class="medal">&#129352;</span>Machines</td><td>2nd &middot; Eagle</td></tr>
+      <tr><td><span class="medal">&#129352;</span>Machines</td><td>2nd &middot; Regionals</td></tr>
+      <tr><td><span class="medal">&#129353;</span>Water Quality</td><td>3rd &middot; Eagle</td></tr>
+      <tr><td><span class="medal">&#129353;</span>Water Quality</td><td>3rd &middot; Regionals</td></tr>
+      <tr><td><span class="medal">4</span>Scrambler</td><td>4th &middot; Regionals</td></tr>
+      <tr><td><span class="medal">5</span>Water Quality</td><td>5th &middot; GA Scrimmage</td></tr>
+      <tr><td><span class="medal">6</span>Machines</td><td>6th &middot; Clarksville</td></tr>
+      <tr><td><span class="medal">10</span>Scrambler</td><td>10th &middot; Nationals</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="more">
+  <div class="wrap">
+    <p class="eyebrow">More</p>
+    <h2>Beyond the screen</h2>
+    <div class="item">
+      <div><h3>Baltimore Symphony Youth Orchestra &mdash; Viola</h3><p>Selected for the Philharmonia Orchestra from over 600 applicants.</p></div>
+      <span class="yr">2026&ndash;27</span>
+    </div>
+    <div class="item">
+      <div><h3>iCode &mdash; Teaching Assistant</h3><p>Paid four-week internship mentoring younger students and running some class days on my own.</p></div>
+      <span class="yr">2026</span>
+    </div>
+	<div class="item">
+      <div><h3>Leadership &mdash; Boy Scouts</h3><p>I help younger kids excell and learn life skills through Scouting. </p></div>
+      <span class="yr">2026</span>
+    </div>
+    <div class="tags">
+      <span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">HTML / CSS</span>
+      <span class="tag">Claude API</span><span class="tag">Prompt engineering</span>
+      <span class="tag">Viola</span><span class="tag">Teamwork</span><span class="tag">Mentoring</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Praneeth Anireddy &middot; 2026</div>
+</footer>
+
+<script>
+const btn=document.getElementById('themeBtn');
+const set=t=>{document.documentElement.dataset.theme=t;btn.textContent=t==='dark'?'\u25D1':'\u25D0';};
+set(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+btn.onclick=()=>set(document.documentElement.dataset.theme==='dark'?'light':'dark');
+</script>
+</body>
+</html>
